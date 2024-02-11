@@ -1,7 +1,6 @@
 # HW2.py
 # Author: Vadym Didukh
-
-
+# Author:
 # Question 1:
 # Write some code that prompts the user for their age. Depending on the input:
 number = float(input("Please enter your age: "))
@@ -11,11 +10,9 @@ elif number > 12 and number < 20:
     print("You are a teenager.")
 else:
     print("You are an adult.")          
-
 # If the age is less than 13, print "You are a child."
 # If the age is between 13 and 19, print "You are a teenager."
 # If the age is 20 or older, print "You are an adult."
-
 # Question 2:
 # Write some code to display the following pattern using a for or while loop:
 # 1
@@ -27,7 +24,6 @@ for i in range (6):
     for j in range (1, i + 1):
         print(j, end= '')
     print()    
-       
 # Question 3:
 # Write some code that prompts the user to input 10 numbers. After all the numbers are inputted, the program should display:
 
@@ -52,7 +48,6 @@ for i in range(10):
 print("The highest number is ", highest)
 print("The lowest number is", lowest)
 print("The average of the numbers is", average)
-
 # Question 4:
 # Vowel Counter - Write some code that prompts the user to enter a string. The program should then display the number of vowels in the string. IE. If the user enters "Hello World", the program should display 3.
 # the vowels are a, e, i, o, u
@@ -66,3 +61,5 @@ for char in lower_case:
     if char in "aeiou":
       counter += 1      
 print("The number of vowels is", counter)        
+
+
