@@ -42,7 +42,7 @@ highest = 0
 lowest = 0
 
 for i in range(10):
-    number = float(input("Please enter numbers: "))
+    number = float(input("Please enter number: "))
     total = total + number
     average = total / 10
     if highest is 0 or number > highest:
