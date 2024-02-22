@@ -18,7 +18,7 @@ def number_squared(num: int) -> int:
         int: the number squared
         """
     return num**2    
-print(number_squared(0))
+print("Your squared number is: " + str(number_squared(0)))
 
 # Question 2:
 # Write a function that takes in a string, a letter, and a number and returns the string with the letter replaced at the number index
@@ -87,15 +87,15 @@ def random_number():
         
     return random.randint(1, 100)
 
-print(random_number())    
+print("The random number is: " + str(random_number()))    
 
 # Question 7:
 # import the math module and use it to find the square root of 16 (hint: use the sqrt() function)
-from math import sqrt 
+from math import sqrt
 def square_root(num: int):
     
     return num**2    
-print(square_root(16))
+print("Squared root of " + str(16) + " is: " + str(square_root(16)))
 
 # Question 8:
 # import the sys module and use it to print the version of python you are using
