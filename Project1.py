@@ -119,7 +119,7 @@ def main():
 
             play_again = input("Do you want to play again? (yes or no) ").lower()
             if play_again != "yes":
-                print("Thank you for playing! Your final score is" + score + " points.")
+                print("Thank you for playing! Your final score is " + (str(score)) +  " points.")
                 break
         elif user_ans.lower() == 'no':
             print("Not ready to play? Okay, see ya later!")
