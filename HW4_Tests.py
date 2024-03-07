@@ -1,5 +1,5 @@
 # HW4_Tests.py
-# Author:
+# Author: Vadym Didukh
 
 import pytest
 

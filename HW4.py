@@ -1,5 +1,5 @@
 # HW4.py
-# Author:
+# Author: Vadym Didukh
 
 ### README
 # This file contains buggy functions that you need to fix.
@@ -27,11 +27,11 @@ def add(a: float, b: float) -> float:
     Returns:
         float: the sum of a and b
     """
-    return a - b
+    return a + b
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: the return has a - b instead of a + b on line 30
 
 
 def subtract(a: float, b: float) -> float:
@@ -44,11 +44,11 @@ def subtract(a: float, b: float) -> float:
     Returns:
         float: the difference of a and b
     """
-    return a + b
+    return a - b
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: the return has a + b instead of a - b on line 47
 
 
 def divide(a, b):
@@ -61,11 +61,11 @@ def divide(a, b):
     Returns:
         float: the quotient of a and b
     """
-    return a * b
+    return a / b
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: the return has a * b instead of a / b on line 64
 
 
 def multiply(a: float, b: float) -> float:
@@ -78,11 +78,11 @@ def multiply(a: float, b: float) -> float:
     Returns:
         float: the product of a and b
     """
-    return a / b
+    return a * b
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: the return has a / b instead of a * b on line 81
 
 
 def greet(name: str) -> str:
@@ -94,11 +94,11 @@ def greet(name: str) -> str:
     Returns:
         _type_: the greeting message
     """
-    return "Heloo, " + name + "!"
+    return "Hello, " + name + "!"
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: typo in word "Hello" on line 97
 
 
 def square(num: int) -> int:
@@ -110,11 +110,11 @@ def square(num: int) -> int:
     Returns:
         int: the square of the number
     """
-    return num + num
+    return num ** 2
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: the return has num + num instead of num ** 2 on line 113
 
 
 def is_even(num: int) -> bool:
@@ -126,11 +126,11 @@ def is_even(num: int) -> bool:
     Returns:
         bool: True if the number is even, False otherwise
     """
-    return num % 2 == 1
+    return num % 2 == 0
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: return has num % 2 == 1 instead of num % 2 == 0
 
 
 def grade_calculator(score: float) -> str:
@@ -142,11 +142,11 @@ def grade_calculator(score: float) -> str:
     Returns:
         str: the grade for the score
     """
-    if 90 <= score <= 100:
+    if  90 <= score and score <= 100:
         return "A"
     elif 80 <= score < 90:
         return "B"
-    elif 70 <= score < 79:
+    elif 70 <= score <= 79:
         return "C"
     elif 60 <= score < 70:
         return "D"
@@ -157,7 +157,7 @@ def grade_calculator(score: float) -> str:
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: missing "and score" in if statement and instead of <79 should be <=79 on line 149
 
 
 def speed_check(speed: float) -> str:
@@ -170,9 +170,9 @@ def speed_check(speed: float) -> str:
         str: the speed check result
     """
     # Assuming general speed limits: min: 20, max: 70 (in mph)
-    if speed < 20:
+    if speed <= 20:
         return "Too slow"
-    elif 20 <= speed <= 60:
+    elif 20 <= speed <= 70:
         return "Within limit"
     elif speed > 70:
         return "Over speed limit"
@@ -181,7 +181,7 @@ def speed_check(speed: float) -> str:
 
 
 # Where is the bug in the buggy function?
-# A:
+# A: line 175 need to change max speed limit from 60 to 70
 
 
 def is_leap_year(year: int) -> bool:
@@ -191,24 +191,24 @@ def is_leap_year(year: int) -> bool:
         year (int): year to check
 
     Returns:
-        bool: True if the year is a leap year, False otherwise
-    """
-    if year % 4 == 0:
+        bool: True if the year is a leap year, False otherwise"""
+        
+    
+
+# Where is the bug in the buggy function?
+# A: set up the conditions in the right order for checking leap years, starting with 400, then 100, and 4.
+# and changed bool in line 204 from True to False.
+    if year % 400 == 0:
         return True
     elif year % 100 == 0:
         return False
-    elif year % 400 == 0:
+    elif year % 4 == 0:
         return True
     else:
         return False
 
-
-# Where is the bug in the buggy function?
-# A:
-
-
 def main():
-    print("You are running me directly!")
+    print(is_leap_year(1900))
 
 
 if __name__ == "__main__":
