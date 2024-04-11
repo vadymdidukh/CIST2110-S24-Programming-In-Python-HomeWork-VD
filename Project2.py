@@ -1,5 +1,5 @@
 # Project 2
-# Name:
+# Name: Vadym Didukh
 # Project 2 will test on topics learned in class so far. You will be creating a contact list program with an external csv file that will store the contacts. MAKE YOUR LIFE EASIER AND ENABLE WORDWRAP! VIEW -> WORD WRAP.
 #
 # The program will have the following features:
