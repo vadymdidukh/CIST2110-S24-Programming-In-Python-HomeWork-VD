@@ -28,7 +28,7 @@ import datetime as dt
 # of days until New Year's Day. The function should also display the number of days until New Year's Day in the Streamlit app. The function should be called in the app function. Also include
 # an emoji of a party popper in the Streamlit app.
 # Hint: You can use the date object to create a date for New Years. IE.
-# new_years = dt.date(2024, 1, 1)
+# new_years = dt.date(2025, 1, 1)
 # Hint: To add an emoji, use the st.write() function. IE. st.write("🎉")
 
 
