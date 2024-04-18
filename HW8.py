@@ -29,16 +29,12 @@ def calculate_days_until_birthday(birthday):
     print("Current Date:", current_date)
     
     next_birthday = birthday.replace(year=current_date.year)
-    print("Next Birthday (same year):", next_birthday)
-    
-    if next_birthday < current_date:  # Check if next birthday is in the past (in current year)
-        print("Next Birthday is in the past (in current year)")
-        next_birthday = birthday.replace(year=current_date.year + 1)  # Move next birthday to next year
-        print("Next Birthday (next year):", next_birthday)
+   
+    if next_birthday < current_date:  
+        next_birthday = birthday.replace(year=current_date.year + 1) 
     
     days_until_birthday = (next_birthday - current_date).days
-    print("Days until Birthday:", days_until_birthday)
-    
+   
     return days_until_birthday
 # 2. Create a function days_until_semester_ends that will calculate how many days from now until the end of the semester. The function should take in the current date as a parameter and return the number of days until the end of the semester. The function should also display the number of days until the end of the semester in the Streamlit app. The function should be called in the app function.
 # Hint: You can use the date object to create a date for the end of the semester. IE.
