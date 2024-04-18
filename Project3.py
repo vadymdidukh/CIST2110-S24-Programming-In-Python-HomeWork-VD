@@ -32,7 +32,7 @@
 #    a. __str__ (returns a string representation of the book using the following format: ISBN: <ISBN>, Title: <Title>, Author: <Author>, Borrowed: <Borrowed>)
 #    b. check_out - sets borrowed to True and returns a message that the book has been checked out
 #    c. check_in - sets borrowed to False and returns a message that the book has been checked in
-#    d. borrowed - returns True if the book is borrowed and False if the book is not borrowed
+#    d. isBorrowed - returns True if the book is borrowed and False if the book is not borrowed
 
 
 # 2. Create a User class that has the following attributes (create a __init__ method)):
@@ -43,7 +43,7 @@
 
 # Methods:
 #    a. __str__ (returns a string representation of the user using the following format: Name: <Name>, ID: <ID>, Borrowed Books: <Borrowed Books>)
-#    b. borrow_book - adds the book to the borrowedBooks list, updates the isBorrowed attribute of the book to True, and returns a message that the book has been checked out (should take a book as a parameter)
+#    b. borrow_book - adds the book to the borrowed_books list, updates the isBorrowed attribute of the book to True, and returns a message that the book has been checked out (should take a book as a parameter)
 #    c. return_book - removes the book from the borrowedBooks list, updates the isBorrowed attribute of the book to False, and returns a message that the book has been checked in (should take a book as a parameter)
 
 # 3. Create a Library class that has the following attributes (create a __init__ method)):
