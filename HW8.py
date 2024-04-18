@@ -25,13 +25,10 @@ def calculate_days(date):
 
 # 1. Create a function calculate_days_until_birthday that will calculate how many days from now until the user's birthday. The function should take in the user's birthday as a parameter and return the number of days until their birthday. The function should also display the number of days until their birthday in the Streamlit app. The function should be called in the app function.
 def calculate_days_until_birthday(birthday):
-    current_date = dt.datetime.now().date()
-    
-    next_birthday = birthday.replace(year=current_date.year)
-   
+    current_date = dt.datetime.now().date()    
+    next_birthday = birthday.replace(year=current_date.year)   
     if next_birthday < current_date:  
-        next_birthday = birthday.replace(year=current_date.year + 1) 
-    
+        next_birthday = birthday.replace(year=current_date.year + 1)     
     days_until_birthday = (next_birthday - current_date).days
    
     return days_until_birthday
