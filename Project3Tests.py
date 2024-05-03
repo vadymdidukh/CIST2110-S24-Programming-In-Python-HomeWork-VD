@@ -9,7 +9,7 @@ from Project3 import Book, User, Library
 #   \ \  \___|\ \  \\  \\ \  \\\  \|\  \\_\  \ \  \_|\ \ \  \____   \ \  \          __\_\  \
 #    \ \__\    \ \__\\ _\\ \_______\ \________\ \_______\ \_______\  \ \__\        |\_______\
 #     \|__|     \|__|\|__|\|_______|\|________|\|_______|\|_______|   \|__|        \|_______|
-# Author:
+# Author: Vadym Didukh
 # CIST2110-Project-3 Library Management System (LMS) Test Cases
 # This file should be used in conjunction with a test plan that you create. The file can be csv, markdown, or text. The test plan should be submitted with this file and project3.py.
 
@@ -53,11 +53,14 @@ def test_user_borrow():
 
 
 def test_user_return():
+    user = User("John Doe", 1)
+    book = Book("Test Book", "Author Name", 1234567890)
+    user.borrow_book(book)
+    user.return_book(book)
+    assert book not in user.borrowed_books
     ### Implement this test case ###
     ### Be sure to include this test case in your test plan ###
-    pass  # Remove this line when you implement this test case
-
-
+    
 # Test cases for the Library class
 def test_library_add_book():
     library = Library()
@@ -82,6 +85,11 @@ def test_library_find_book():
 
 
 def test_library_find_user():
+    library = Library()
+    user = User("John Doe", 1)
+    library.add_user(user)
+    found = library.find_user(1)
+    assert found == user
     ### Implement this test case ###
     ### Be sure to include this test case in your test plan ###
-    pass  # Remove this line when you implement this test case
+    
